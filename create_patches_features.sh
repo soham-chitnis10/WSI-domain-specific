@@ -35,7 +35,7 @@ for dir in $(ls $data_path)
 do
     if [ ! -d $patch_path/$dir ]
     then
-        cd CLAM-master
+        cd CLAM
         python create_patches_fp.py --source $data_path/$dir --save_dir $patch_path/$dir --patch_size 256 --preset glioma.csv --seg --patch --stitch --patch_level 1 > $patch_path/$dir.txt
         echo "Patching completed:" $dir
         cd ..

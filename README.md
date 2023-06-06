@@ -22,3 +22,9 @@ Install net:cal lib Python library
 pip install netcal
 ```
 
+For Patch extraction, clone CLAM
+
+```shell
+git https://github.com/mahmoodlab/CLAM.git
+```
+
