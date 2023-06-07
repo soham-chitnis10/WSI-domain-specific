@@ -38,7 +38,7 @@ parser.add_argument("--csv_path", type=str, required=True)
 parser.add_argument("--bag_loss", type=str, default="cross-entropy")
 parser.add_argument('--instance_loss', type=str, default="svm")
 parser.add_argument('--model_path', type=str,default=None)
-parser.add_argument('--model', type=str, choices=["CLAM", "TransMIL"], default="CLAM")
+parser.add_argument('--model', type=str, choices=["CLAM-SB", "CLAM-MB", "TransMIL"], default="CLAM-SB")
 parser.add_argument('--result_dir', type=str, required=True)
 
 args = parser.parse_args()

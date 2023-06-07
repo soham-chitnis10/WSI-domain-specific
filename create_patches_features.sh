@@ -1,22 +1,11 @@
 #!/bin/sh
-#SBATCH --job-name=feature_ext           # Job name
-#SBATCH --time=24:00:00                     # Time limit hrs:min:sec
-#SBATCH --output=feature_ext%j.out             # Standard output and error log
-#SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --mail-user=f20201723@goa.bits-pilani.ac.in
-#SBATCH --cpus-per-task=20                  # Run a task on 10 cpus
-#SBATCH --gres=gpu:2                        # Run a single GPU task
-#SBATCH --mem=128GB                          # Use 32GB of memory.
-#SBATCH --partition=normal               # Use dgx partition.
-##SBATCH --account=f20201723
 date
-
-path="/home/f20201723/glioma_subtyping"
-data_path=$path/data
-patch_path=$path/patch_data_20x
-feature_model="convunext"
-feature_path=$path/features_20x/convunext_new
-output_path=$path/outputs/$feature_model/
+path="/home/f20201723/glioma_subtyping" # root
+data_path=$path/data # path to data
+patch_path=$path/patch_data_20x # path to save patches
+feature_model="ResNet" # Feature extractor
+feature_path=$path/features_20x/convunext_new # Path to save features
+output_path=$path/outputs/$feature_model/ # Path to generated outputs
 
 if [ ! -d $patch_path ]
 then
