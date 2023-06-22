@@ -30,7 +30,7 @@ git https://github.com/mahmoodlab/CLAM.git
 
 ## Patch and Feature Extraction
 
-Download file from [here](). Place the file in `CLAM/presets`
+Download file from [here](https://drive.google.com/file/d/1okHRlO5kvCFCp5YAB9F2jKBKO_MxpobA/view?usp=sharing). Place the file in `CLAM/presets`
 
 The following directory structure is required for data
 
