@@ -103,3 +103,10 @@ To evaluate a model, use the following command
 ```shell
 python --n_classes NUM_CLASSES --device GPU_DEVICE --feat_dir FEATURE_DIR --csv_path CSV_PATH --model_path MODEL_CHECKPOINT --model MODEL --result_dir RESULT_DIR
 ```
+
+## Heatmaps
+
+To generate heatmaps for a given set of slides for a specific model, use the following command
+
+```shell
+```
