@@ -39,9 +39,10 @@ The following directory structure is required for data
 ├── root
 │   ├── data
 │   │   ├── Class1
-|   |   ├── Class2
-|   |   └── ...
+│   │   ├── Class2
+│   │   └── ...
 ```
+Before running the script, set the path in the script itself.
 
 ```shell
 bash create_patches_features.sh
@@ -53,39 +54,39 @@ This creates a following directory structure
 ├── root
 │   ├── data
 │   │   ├── Class1
-|   |   |   ├── Slide1.ndpi
-|   |   |   ├── Slide2.ndpi
-|   |   |   └── ...
-|   |   ├── Class2
-|   |   |   ├── Slide1.ndpi
-|   |   |   ├── Slide2.ndpi
-|   |   |   └── ...
-|   |   └── ...
-|   ├── patches
-|   |   ├── masks
-|   |   |   ├── Slide1.png
-|   |   |   ├── Slide2.png
-|   |   |   └── ...
-|   |   ├── patches
-|   |   |   ├── Slide1.h5
-|   |   |   ├── Slide2.h5
-|   |   |   └── ...
-|   |   ├── stitches
-|   |   |   ├── Slide1.png
-|   |   |   ├── Slide2.png
-|   |   |   └── ...
-|   |   └── process_list_autogen.csv
-|   ├── features
-|   |   ├── Feature_model
-|   |   |   ├── Class1
-|   |   |   |   ├── Slide1
-|   |   |   |   ├── Slide2
-|   |   |   |   └── ...
-|   |   |   ├── Class2
-|   |   |   |   ├── Slide1
-|   |   |   |   ├── Slide2
-|   |   |   |   └── ...
-|   |   |   └── ...
+│   │   │   ├── Slide1.ndpi
+│   │   │   ├── Slide2.ndpi
+│   │   │   └── ...
+│   │   ├── Class2
+│   │   │   ├── Slide1.ndpi
+│   │   │   ├── Slide2.ndpi
+│   │   │   └── ...
+│   │   └── ...
+│   ├── patches
+│   │   ├── masks
+│   │   │   ├── Slide1.png
+│   │   │   ├── Slide2.png
+│   │   │   └── ...
+│   │   ├── patches
+│   │   │   ├── Slide1.h5
+│   │   │   ├── Slide2.h5
+│   │   │   └── ...
+│   │   ├── stitches
+│   │   │   ├── Slide1.png
+│   │   │   ├── Slide2.png
+│   │   │   └── ...
+│   │   └── process_list_autogen.csv
+│   ├── features
+│   │   ├── Feature_model
+│   │   │   ├── Class1
+│   │   │   │   ├── Slide1
+│   │   │   │   ├── Slide2
+│   │   │   │   └── ...
+│   │   │   ├── Class2
+│   │   │   │   ├── Slide1
+│   │   │   │   ├── Slide2
+│   │   │   │   └── ...
+│   │   │   └── ...
 ```
 
 ## Training
@@ -108,5 +109,8 @@ python --n_classes NUM_CLASSES --device GPU_DEVICE --feat_dir FEATURE_DIR --csv_
 
 To generate heatmaps for a given set of slides for a specific model, use the following command
 
+Before running script, please set the paths and desired configuration in the script itself.
+
 ```shell
+bash create_heatmaps.sh
 ```

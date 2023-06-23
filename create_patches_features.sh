@@ -1,6 +1,6 @@
 #!/bin/sh
 date
-path="/home/f20201723/glioma_subtyping" # root
+path="glioma_subtyping" # root
 data_path=$path/data # path to data
 patch_path=$path/patch_data_20x # path to save patches
 feature_model="ResNet" # Feature extractor
