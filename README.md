@@ -25,7 +25,7 @@ pip install netcal
 For Patch extraction, clone CLAM into this repository
 
 ```shell
-git https://github.com/mahmoodlab/CLAM.git
+git clone https://github.com/mahmoodlab/CLAM.git
 ```
 
 ## Patch and Feature Extraction
