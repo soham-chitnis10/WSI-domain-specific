@@ -1,4 +1,10 @@
-# WSI-domain-specific
+# Domain-Specific Pre-training Improves Confidence in Whole Slide Image Classification
+
+*Accepted Paper at EMBC 2023.*
+
+**Abstract**: Whole Slide Images (WSIs) or histopathology images are used in digital pathology. WSIs pose great challenges to deep learning models for clinical diagnosis, owing to their size and lack of pixel-level annotations. With the recent advancements in computational pathology, newer multiple-instance learning-based models have been proposed. Multiple-instance learning for WSIs necessitates creating patches and uses the encoding of these patches for diagnosis. These models use generic pre-trained models (ResNet-50 pre-trained on ImageNet) for patch encoding. The recently proposed KimiaNet, a DenseNet121 model pre-trained on TCGA slides, is a domain-specific pre-trained model. This paper shows the effect of domain-specific pre-training on WSI classification. To investigate the effect of domain-specific pre-training, we considered the current state-of-the-art multiple-instance learning models, 1) CLAM, an attention-based model, and 2) TransMIL, a self-attention-based model, and evaluated the models' confidence and predictive performance in detecting primary brain tumors - gliomas. Domain-specific pre-training improves the confidence of the models and also achieves a new state-of-the-art performance of WSI-based glioma subtype classification, showing a high clinical applicability in assisting glioma diagnosis.
+
+Released [Preprint](https://arxiv.org/abs/2302.09833v2).
 
 ## Installation
 
@@ -91,7 +97,7 @@ This creates a following directory structure
 
 ## Training
 
-To train a model use the following command. Since the experiment was conducted with multiple data and model seeds the option to set it is available.
+To train a model, use the following command. Since the experiment was conducted with multiple data and model seeds the option to set it is available.
 
 ```shell
 python train_seeded.py --name WANDB_PROJECT_NAME --n_classes NUM_CLASSES --feat_dir FEATURE_DIR --csv CSV_PATH --feature_model FEATURE_MODEL --model MODEL --drop_out --early_stopping --opt OPTIMIZER --result_dir RESULT_DIR
@@ -99,7 +105,7 @@ python train_seeded.py --name WANDB_PROJECT_NAME --n_classes NUM_CLASSES --feat_
 
 ## Evaluation
 
-To evaluate a model, use the following command
+To evaluate a model, use the following command.
 
 ```shell
 python --n_classes NUM_CLASSES --device GPU_DEVICE --feat_dir FEATURE_DIR --csv_path CSV_PATH --model_path MODEL_CHECKPOINT --model MODEL --result_dir RESULT_DIR
@@ -107,9 +113,9 @@ python --n_classes NUM_CLASSES --device GPU_DEVICE --feat_dir FEATURE_DIR --csv_
 
 ## Heatmaps
 
-To generate heatmaps for a given set of slides for a specific model, use the following command
+To generate heatmaps for a given set of slides for a specific model, use the following command.
 
-Before running script, please set the paths and desired configuration in the script itself.
+Before running the script, please set the paths and desired configuration in the script itself. Model Checkpoints can be found in the `results` folder.
 
 ```shell
 bash create_heatmaps.sh
