@@ -1,7 +1,7 @@
 # Domain-Specific Pre-training Improves Confidence in Whole Slide Image Classification
 ![image](https://github.com/soham-chitnis10/WSI-domain-specific/assets/77532586/3fed2964-99a7-42be-baac-265cc125aaf7)
 
-*Accepted Paper at EMBC 2023.* [Preprint](https://arxiv.org/abs/2302.09833v2).
+*Published at EMBC 2023.* [Preprint](https://arxiv.org/abs/2302.09833v2). [IEEE Explorer](https://ieeexplore.ieee.org/document/10340659)
 
 **Abstract**: Whole Slide Images (WSIs) or histopathology images are used in digital pathology. WSIs pose great challenges to deep learning models for clinical diagnosis, owing to their size and lack of pixel-level annotations. With the recent advancements in computational pathology, newer multiple-instance learning-based models have been proposed. Multiple-instance learning for WSIs necessitates creating patches and uses the encoding of these patches for diagnosis. These models use generic pre-trained models (ResNet-50 pre-trained on ImageNet) for patch encoding. The recently proposed KimiaNet, a DenseNet121 model pre-trained on TCGA slides, is a domain-specific pre-trained model. This paper shows the effect of domain-specific pre-training on WSI classification. To investigate the effect of domain-specific pre-training, we considered the current state-of-the-art multiple-instance learning models, 1) CLAM, an attention-based model, and 2) TransMIL, a self-attention-based model, and evaluated the models' confidence and predictive performance in detecting primary brain tumors - gliomas. Domain-specific pre-training improves the confidence of the models and also achieves a new state-of-the-art performance of WSI-based glioma subtype classification, showing a high clinical applicability in assisting glioma diagnosis.
 
@@ -36,7 +36,7 @@ git clone https://github.com/mahmoodlab/CLAM.git
 
 ## Patch and Feature Extraction
 
-Download file from [here](https://drive.google.com/file/d/1okHRlO5kvCFCp5YAB9F2jKBKO_MxpobA/view?usp=sharing). Place the file in `CLAM/presets`
+Download the file from [here](https://drive.google.com/file/d/17e-83Ge9fWByoVBCYH4YXATIwCepEPMB/view?usp=sharing). Place the file in `CLAM/presets`
 
 The following directory structure is required for data
 
